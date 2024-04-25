@@ -55,6 +55,28 @@ export const load = {
                 height: 16
             }
         })
+
+        //Player
+        loadSprite('idle-sprite', 'assets/pantera_stand.png', {
+            sliceX: 2,
+            sliceY: 1,
+            anims: { 'idle-anim': { from: 0, to: 1, loop: true }}
+        })
+        loadSprite('run-sprite', './assets/pantera_run.png', {
+            sliceX: 6,
+            sliceY: 1,
+            anims: { 'run-anim': { from: 0, to: 5, loop: true }}
+        })
+        loadSprite('jump-sprite', 'assets/pantera_jump.png', {
+            sliceX: 1,
+            sliceY: 1,
+            anims: { 'jump-anim': { from: 0, to: 0, loop: true }}
+        })
+        loadSprite('fall-sprite', 'assets/pantera_fall.png', {
+            sliceX: 1,
+            sliceY: 1,
+            anims: { 'fall-anim' : { from: 0, to: 0, loop: true }}
+        })
     },
 
         //Sounds
