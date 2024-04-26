@@ -5,6 +5,7 @@ import { uiManager } from "./utils/UIManager.js"
 import { bgSoundManager } from "./utils/BGSoundManager.js"
 import { Player } from "./entities/Player.js"
 import { Bats } from "./entities/Bats.js"
+import { Nightmares } from "./entities/Nightmares.js"
 import { level1Config } from "./content/level1/config.js"
 import { level1Layout, level1Mappings } from "./content/level1/level1Layout.js"
 
@@ -74,6 +75,15 @@ const scenes = {
             level1Config.batType
         )
         bats.setMovementPattern()
+
+        const nightmares = new Nightmares(
+            level1Config.nightmarePositions.map((nightmarePos) => nightmarePos()),
+            level1Config.nightmareAmplitudes,
+            level1Config.nightmareSpeeds,
+            level1Config.nightmareType
+        )
+        nightmares.setMovementPattern()
+        nightmares.enablePassthrough()
     },
 
     gameover: () => {

@@ -73,6 +73,15 @@ export const load = {
             },
         })
 
+        loadSprite('nightmare-1', './assets/nightmare.png', {
+            sliceX: 8,
+            sliceY: 1,
+            anims: { 
+                run: {from: 0, to: 3, loop: true},
+                idle: {from: 4, to: 7, loop: true}
+            }
+        })
+
         //Player
         loadSprite('idle-sprite', 'assets/pantera_stand.png', {
             sliceX: 2,
