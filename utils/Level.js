@@ -1,5 +1,9 @@
 export class Level {
 
+    drawBackgroundBat(bgSpriteName) {
+        add( [sprite(bgSpriteName), scale (0.7), fixed() ])
+    }
+
     drawMapLayout(levelLayout, mappings) {
         const layerSettings = {
             tileWidth: 16,

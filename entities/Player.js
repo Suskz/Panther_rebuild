@@ -131,6 +131,15 @@ export class Player {
         go("gameover")
     }
 
+    //vunerabilidade a mobs
+    enableMobVunerability() {
+        function hitAndRespawn(context) {
+            play("hit", { speed: 1.5 })
+            context.respawnPlayer()
+        }
+        this.gameObj.onCollide("bats", () => hitAndRespawn(this))
+    }
+
     update() {
         camScale(1.5)
         onUpdate(() => {

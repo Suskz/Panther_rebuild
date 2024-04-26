@@ -4,6 +4,7 @@ import { Level } from "./utils/Level.js"
 import { uiManager } from "./utils/UIManager.js"
 import { bgSoundManager } from "./utils/BGSoundManager.js"
 import { Player } from "./entities/Player.js"
+import { Bats } from "./entities/Bats.js"
 import { level1Config } from "./content/level1/config.js"
 import { level1Layout, level1Mappings } from "./content/level1/level1Layout.js"
 
@@ -49,6 +50,7 @@ const scenes = {
         bgSoundManager.play("dark")
 
         const level1 = new Level()
+        level1.drawBackgroundBat('background')
         level1.drawMapLayout(level1Layout, level1Mappings)
 
         const player = new Player(
@@ -62,8 +64,16 @@ const scenes = {
         )
 
         player.enablePassthrough()
+        player.enableMobVunerability()
 
         player.update()
+
+        const bats = new Bats(
+            level1Config.batPositions.map((batPos) => batPos()),
+            level1Config.batRanges,
+            level1Config.batType
+        )
+        bats.setMovementPattern()
     },
 
     gameover: () => {

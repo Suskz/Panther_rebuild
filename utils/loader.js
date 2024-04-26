@@ -13,6 +13,9 @@ export const load = {
         loadSprite("key-left", "./assets/Arrow_Left_Key_Dark.png")
         loadSprite("key-right", "./assets/Arrow_Right_Key_Dark.png")
 
+        //background map 1
+        loadSprite("background", "./assets/background.jpg")
+
         //map tileset
         loadSpriteAtlas('./assets/tileset.png', {
             'platform-left': { x: 82, y: 64, width: 16,
@@ -56,6 +59,20 @@ export const load = {
             }
         })
 
+        //Mobs
+        loadSprite("bat-1", "./assets/Bat_1.png", {
+            sliceX: 4,
+            sliceY: 8,
+            anims: {
+              fly: {
+                from: 4,
+                to: 7,
+                speed: 6,
+                loop: true,
+              },
+            },
+        })
+
         //Player
         loadSprite('idle-sprite', 'assets/pantera_stand.png', {
             sliceX: 2,
@@ -82,8 +99,10 @@ export const load = {
         //Sounds
         sounds: () => {
         loadSound("confirm-ui", "./sounds/confirm-ui.wav")
+        loadSound("hit", "./sounds/hit.wav")
         loadSound("dark", "./sounds/dark.mp3")
         loadSound("jump", "./sounds/jump.mp3")
+        loadSound("dive", "./sounds/dive.mp3")
         //loadSound("menusong", "./sounds/menusong.mp3")
     }
 }
