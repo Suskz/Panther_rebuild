@@ -6,6 +6,7 @@ import { bgSoundManager } from "./utils/BGSoundManager.js"
 import { Player } from "./entities/Player.js"
 import { Bats } from "./entities/Bats.js"
 import { Nightmares } from "./entities/Nightmares.js"
+import { Demons } from "./entities/Demons.js"
 import { level1Config } from "./content/level1/config.js"
 import { level1Layout, level1Mappings } from "./content/level1/level1Layout.js"
 
@@ -84,6 +85,14 @@ const scenes = {
         )
         nightmares.setMovementPattern()
         nightmares.enablePassthrough()
+
+        const demons = new Demons(
+            level1Config.demonPositions.map((demonPos) => demonPos()),
+            level1Config.demonRanges,
+            level1Config.demonType
+        )
+      
+        demons.setMovementPattern()
     },
 
     gameover: () => {

@@ -16,6 +16,12 @@ export const level1Config = {
     ],
     nightmareAmplitudes: [700],
     nightmareSpeeds: [2],
-    nightmareType: 1
+    nightmareType: 1,
+
+    demonPositions: [
+        () => vec2(3190, 490)
+    ],
+    demonRanges: [90],
+    demonType: 1
 }
   

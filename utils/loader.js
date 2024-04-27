@@ -82,6 +82,14 @@ export const load = {
             }
         })
 
+        loadSprite('demon-1', './assets/demon.png', {
+            sliceX: 11,
+            sliceY: 1,
+            anims: { 
+                fly: {from: 0, to: 10, loop: true},
+            }
+        })
+
         //Player
         loadSprite('idle-sprite', 'assets/pantera_stand.png', {
             sliceX: 2,
