@@ -16,6 +16,25 @@ export const load = {
         //background map 1
         loadSprite("background", "./assets/background.jpg")
 
+        loadSprite("water_night", "./assets/Water.png", {
+            sliceX: 8,
+            sliceY: 1,
+            anims: {
+              wave: {
+                from: 0,
+                to: 7,
+                speed: 14,
+                loop: true,
+              },
+              "wave-reversed": {
+                from: 7,
+                to: 0,
+                speed: 14,
+                loop: true,
+              },
+            },
+        })
+
         //map tileset
         loadSpriteAtlas('./assets/tileset.png', {
             'platform-left': { x: 82, y: 64, width: 16,

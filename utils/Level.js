@@ -1,5 +1,13 @@
 export class Level {
 
+    drawWaves(type, anim) {
+        let offset = 0
+        for (let i = 0; i < 53; i++) {
+          add([sprite(type, { anim }), pos(offset, 820), scale(4)])
+          offset += 64
+        }
+    }
+
     drawBackgroundBat(bgSpriteName) {
         add( [sprite(bgSpriteName), scale (0.7), fixed() ])
     }

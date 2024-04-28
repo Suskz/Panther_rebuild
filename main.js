@@ -52,9 +52,10 @@ const scenes = {
         bgSoundManager.play("dark")
 
         const level1 = new Level()
+        
         level1.drawBackgroundBat('background')
         level1.drawMapLayout(level1Layout, level1Mappings)
-
+        
         const player = new Player(
             level1Config.playerStartPosX,
             level1Config.playerStartPosY,
@@ -93,6 +94,12 @@ const scenes = {
         )
       
         demons.setMovementPattern()
+
+        level1.drawWaves("water_night", "wave")
+    },
+
+    2: () => {
+
     },
 
     gameover: () => {
