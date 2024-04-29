@@ -68,9 +68,9 @@ class UIManager {
         ])
 
         add([
-            sprite("background-intro"),
+            sprite("background-menu"),
             scale(1),
-            pos(0, 0),
+            pos(0, 69),
             opacity(0.40)
         ])
 
@@ -124,9 +124,9 @@ class UIManager {
         ])
 
         add([
-            sprite("background-controls"),
+            sprite("background-menu"),
             scale(1),
-            pos(0, 0),
+            pos(0, 69),
             opacity(0.40)
         ])
 

@@ -115,4 +115,4 @@ for (const key in scenes) {
     scene(key, scenes[key])
 }
 
-go(1)
+go("menu")

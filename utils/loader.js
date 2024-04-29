@@ -6,8 +6,6 @@ export const load = {
         //menu
         loadSprite("background-menu", "./assets/background-menu.jpg")
         loadSprite("background-black", "./assets/background-black.jpg")
-        loadSprite("background-intro", "./assets/background-intro.jpg")
-        loadSprite("background-controls", "./assets/background-controls.jpg")
         loadSprite("key-up", "./assets/Arrow_Up_Key_Dark.png")
         loadSprite("key-down", "./assets/Arrow_Down_Key_Dark.png")
         loadSprite("key-left", "./assets/Arrow_Left_Key_Dark.png")
