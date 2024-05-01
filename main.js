@@ -103,7 +103,8 @@ const scenes = {
     },
 
     gameover: () => {
-        
+        bgSoundManager.pauseAllSounds()
+        uiManager.displayGameOver()
     },
 
     end: () => {
@@ -115,4 +116,4 @@ for (const key in scenes) {
     scene(key, scenes[key])
 }
 
-go("menu")
+go("gameover")

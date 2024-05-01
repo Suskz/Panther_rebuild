@@ -161,6 +161,38 @@ class UIManager {
             go(1)
         })
     }
+
+    displayGameOver() {
+        add([
+            sprite("background-black"),
+            scale(2),
+            pos(0, 0)
+        ])
+        
+        add([
+            sprite("background-menu"),
+            scale(1),
+            pos(0, 69),
+            opacity(0.40)
+        ])
+
+        add([
+            text("GAME OVER", { size: 100,font:"Roboto-Black"}),
+            area(),
+            anchor("center"),
+            pos(center().x, center().y - (-40))
+        ])
+
+        this.displayBlinkingUIMessage(
+            "Pressione [ Enter ] para iniciar um novo jogo ",
+            vec2(center().x, center().y + 312)
+        )
+
+        onKeyPress("enter", () => {
+            play("confirm-ui", { speed: 1.5})
+            go("intro")
+        })
+    }
 }
 
 export const uiManager = new UIManager()
