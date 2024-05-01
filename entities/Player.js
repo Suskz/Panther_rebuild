@@ -14,6 +14,8 @@ export class Player {
     constructor(
         posX,
         posY,
+        playerRespawPosX,
+        playerRespawPosY,
         speed,
         jumpForce,
         nbLives,
@@ -23,6 +25,8 @@ export class Player {
         this.isInTerminalScene = isInTerminalScene
         this.currentLevelScene = currentLevelScene
         this.makePlayer(posX, posY)
+        this.playerRespawPosX = playerRespawPosX
+        this.playerRespawPosY = playerRespawPosY
         this.speed = speed
         this.jumpForce = jumpForce
         this.lives = nbLives
@@ -121,7 +125,7 @@ export class Player {
     //reviver
     respawnPlayer() {
         if (this.lives > 0) {
-          this.gameObj.pos = vec2(this.initialX, this.initialY)
+          this.gameObj.pos = vec2(this.playerRespawPosX, this.playerRespawPosY)
           this.lives--
           this.isRespawning = true
           setTimeout(() => (this.isRespawning = false), 700)

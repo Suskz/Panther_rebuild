@@ -59,6 +59,8 @@ const scenes = {
         const player = new Player(
             level1Config.playerStartPosX,
             level1Config.playerStartPosY,
+            level1Config.playerRespawPosX,
+            level1Config.playerRespawPosY,
             level1Config.playerSpeed,
             level1Config.jumpForce,
             level1Config.nbLives,
@@ -116,4 +118,4 @@ for (const key in scenes) {
     scene(key, scenes[key])
 }
 
-go("gameover")
+go(1)

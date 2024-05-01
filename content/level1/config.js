@@ -4,6 +4,8 @@ export const level1Config = {
     nbLives: 5,
     playerStartPosX: 180,
     playerStartPosY: 200,
+    playerRespawPosX: 180,
+    playerRespawPosY: 500,
 
     batPositions: [
         () => vec2(500, 230),
