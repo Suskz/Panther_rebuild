@@ -7,8 +7,14 @@ export const level1Config = {
 
     batPositions: [
         () => vec2(500, 230),
+        () => vec2(800, 480),
+        () => vec2(1800, 230),
+        () => vec2(2100, 550),
+        () => vec2(2200, 600),
+        () => vec2(2800, 300),
+        () => vec2(2900, 100),
     ],
-    batRanges: [70],
+    batRanges: [70, 30, 10, 50, 10, 10, 10],
     batType: 1,
 
     nightmarePositions: [
