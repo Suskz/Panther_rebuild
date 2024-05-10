@@ -53,6 +53,7 @@ const scenes = {
 
         const level1 = new Level()
         
+        level1.drawInvisibleWall()
         level1.drawBackgroundBat('background')
         level1.drawEmerald("whiteEmerald", "goldEmerald", "marineEmerald", "redEmerald", "greenEmerald", "blueEmerald", "purpleEmerald")
         level1.drawMapLayout(level1Layout, level1Mappings)

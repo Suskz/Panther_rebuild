@@ -37,6 +37,11 @@ export class Level {
         }
     }
 
+    drawInvisibleWall() {
+        // left invisible wall
+        add([ rect(16, 720), area(), body({isStatic: true}), opacity(0), pos(110,0) ])
+    }
+
     //Emerald map 1
     drawEmerald(colorEmerald1, colorEmerald2, colorEmerald3, colorEmerald4, colorEmerald5, colorEmerald6, colorEmerald7) {
         add( [sprite(colorEmerald1, {anim: "spin"}), scale (2.2), pos(318, 230), area(), "emerald" ]),
