@@ -99,6 +99,9 @@ const scenes = {
       
         demons.setMovementPattern()
 
+        uiManager.displayLivesCount(player)
+        player.updateLives(uiManager.livesCountUI)
+
         uiManager.displayEmeraldCount(player)
         player.updateCount(uiManager.emeraldCountUI)
 

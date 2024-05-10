@@ -107,6 +107,9 @@ export const load = {
             }
         })
 
+        //hp
+        loadSprite('hp', './assets/hp.png')
+
         //Emeralds 
         loadSprite('purpleEmerald', './assets/purpleEmerald.png', {
             sliceX: 17,
@@ -189,6 +192,7 @@ export const load = {
             sliceY: 1,
             anims: { 'fall-anim' : { from: 0, to: 0, loop: true }}
         })
+
     },
 
         //Sounds

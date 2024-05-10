@@ -206,6 +206,12 @@ export class Player {
         })
     }
 
+    updateLives(livesCountUI) {
+        onUpdate(() => {
+            livesCountUI.text = `${this.lives}`
+        })
+    }
+
     updateCount(emeraldCountUI) {
         onUpdate(() => {
           emeraldCountUI.text = `${this.emeralds} / ${emeraldCountUI.fullEmeraldCount}`

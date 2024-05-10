@@ -93,7 +93,7 @@ class UIManager {
         controlPrompts.add([sprite("greenEmerald", { anim: "spin" }),pos(0, -55), scale(3.5)])
         controlPrompts.add([sprite("blueEmerald", { anim: "spin" }),pos(100, -55), scale(3.5)])
         controlPrompts.add([sprite("purpleEmerald", { anim: "spin" }),pos(200, -55), scale(3.5)])
-        //controlPrompts.add([sprite("hp"),pos(??), scale(3.5)])
+        controlPrompts.add([sprite("hp"),pos(-480, 165), scale(3.5)])
 
         controlPrompts.add([
             text("Após ser presa em um pesadelo, a condição imposta para ser liberta é enfrentar seus medos e juntar as 7 Esmeraldas Místicas!", { font: "Roboto-Black", size: 35, width: 1200}),
@@ -202,6 +202,24 @@ class UIManager {
             play("confirm-ui", { speed: 1.5})
             go("intro")
         })
+    }
+
+    displayLivesCount(player) {
+        this.livesCountUI = add([
+          text(`${player.lives}`, {
+            font: "Roboto-Black",
+            size: 50,
+          }),
+          fixed(),
+          pos(90, 100),
+        ])
+    
+        this.livesCountUI.add([
+          sprite("hp"),
+          pos(-140, -60),
+          scale(3),
+          fixed(),
+        ])
     }
 
     displayEmeraldCount(player) {
