@@ -39,7 +39,7 @@ export class Level {
 
     drawInvisibleWall() {
         // left invisible wall
-        add([ rect(16, 720), area(), body({isStatic: true}), opacity(0), pos(110,0) ])
+        add([ rect(16, 780), area(), body({isStatic: true}), opacity(0), pos(110,0) ])
     }
 
     //Emerald map 1
