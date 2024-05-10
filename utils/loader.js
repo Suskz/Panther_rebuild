@@ -107,6 +107,67 @@ export const load = {
             }
         })
 
+        //Emeralds 
+        loadSprite('purpleEmerald', './assets/purpleEmerald.png', {
+            sliceX: 17,
+            sliceY: 1,
+            anims: { 'spin' : { from: 0, to: 16, loop: true }}
+        })
+
+        loadSprite('marineEmerald', './assets/marineEmerald.png', {
+            sliceX: 17,
+            sliceY: 1,
+            anims: { 'spin' : { from: 0, to: 16, loop: true }}
+        })
+
+        loadSprite('blueEmerald', './assets/blueEmerald.png', {
+            sliceX: 17,
+            sliceY: 1,
+            anims: { 'spin' : { from: 0, to: 16, loop: true }}
+        })
+
+        loadSprite('whiteEmerald', './assets/whiteEmerald.png', {
+            sliceX: 17,
+            sliceY: 1,
+            anims: { 'spin' : { from: 0, to: 16, loop: true }}
+        })
+
+        loadSprite('redEmerald', './assets/redEmerald.png', {
+            sliceX: 17,
+            sliceY: 1,
+            anims: { 'spin' : { from: 0, to: 16, loop: true }}
+        })
+
+        loadSprite('greenEmerald', './assets/greenEmerald.png', {
+            sliceX: 17,
+            sliceY: 1,
+            anims: { 'spin' : { from: 0, to: 16, loop: true }}
+        })
+
+        loadSprite('goldEmerald', './assets/goldEmerald.png', {
+            sliceX: 17,
+            sliceY: 1,
+            anims: { 'spin' : { from: 0, to: 16, loop: true }}
+        })
+
+        loadSprite('superEmerald', './assets/superEmerald.png', {
+            sliceX: 4,
+            sliceY: 1,
+            anims: { 'shiny' : { from: 0, to: 3, loop: true }}
+        })
+
+        loadSprite('emeraldStars', './assets/emeraldStars.png', {
+            sliceX: 4,
+            sliceY: 1,
+            anims: { 'explosion' : { from: 0, to: 3, loop: true, speed: 8 }}
+        })
+
+        loadSprite('bigEmerald', './assets/bigEmerald.png', {
+            sliceX: 8,
+            sliceY: 1,
+            anims: { 'shine' : { from: 0, to: 7, loop: true }}
+        })
+
         //Player
         loadSprite('idle-sprite', 'assets/pantera_stand.png', {
             sliceX: 2,
@@ -137,6 +198,7 @@ export const load = {
         loadSound("dark", "./sounds/dark.mp3")
         loadSound("jump", "./sounds/jump.mp3")
         loadSound("dive", "./sounds/dive.mp3")
+        loadSound("emerald", "./sounds/emerald.mp3")
         //loadSound("menusong", "./sounds/menusong.mp3")
     }
 }

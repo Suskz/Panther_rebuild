@@ -36,4 +36,15 @@ export class Level {
           offset += 64
         }
     }
+
+    //Emerald map 1
+    drawEmerald(colorEmerald1, colorEmerald2, colorEmerald3, colorEmerald4, colorEmerald5, colorEmerald6, colorEmerald7) {
+        add( [sprite(colorEmerald1, {anim: "spin"}), scale (2.2), pos(318, 230), area(), "emerald" ]),
+        add( [sprite(colorEmerald2, {anim: "spin"}), scale (2.2), pos(700, 680), area(), "emerald" ]),
+        add( [sprite(colorEmerald3, {anim: "spin"}), scale (2.2), pos(1300, 740), area(), "emerald" ]),
+        add( [sprite(colorEmerald4, {anim: "spin"}), scale (2.2), pos(1665, 230), area(), "emerald" ]),
+        add( [sprite(colorEmerald5, {anim: "spin"}), scale (2.2), pos(2363, 360), area(), "emerald" ]),
+        add( [sprite(colorEmerald6, {anim: "spin"}), scale (2.2), pos(2816, 550), area(), "emerald" ]),
+        add( [sprite(colorEmerald7, {anim: "spin"}), scale (2.2), pos(3005, 230), area(), "emerald" ])
+    }
 }

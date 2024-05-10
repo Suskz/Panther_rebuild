@@ -85,6 +85,16 @@ class UIManager {
             pos(center().x + 30, center().y)
         ])
 
+        //sprites intro
+        controlPrompts.add([sprite("whiteEmerald", { anim: "spin" }),pos(-400, -55), scale(3.5)])
+        controlPrompts.add([sprite("goldEmerald", { anim: "spin" }),pos(-300, -55), scale(3.5)])
+        controlPrompts.add([sprite("marineEmerald", { anim: "spin" }),pos(-200, -55), scale(3.5)])
+        controlPrompts.add([sprite("redEmerald", { anim: "spin" }),pos(-100, -55), scale(3.5)])
+        controlPrompts.add([sprite("greenEmerald", { anim: "spin" }),pos(0, -55), scale(3.5)])
+        controlPrompts.add([sprite("blueEmerald", { anim: "spin" }),pos(100, -55), scale(3.5)])
+        controlPrompts.add([sprite("purpleEmerald", { anim: "spin" }),pos(200, -55), scale(3.5)])
+        //controlPrompts.add([sprite("hp"),pos(??), scale(3.5)])
+
         controlPrompts.add([
             text("Após ser presa em um pesadelo, a condição imposta para ser liberta é enfrentar seus medos e juntar as 7 Esmeraldas Místicas!", { font: "Roboto-Black", size: 35, width: 1200}),
             pos(-580, -150)
@@ -192,6 +202,22 @@ class UIManager {
             play("confirm-ui", { speed: 1.5})
             go("intro")
         })
+    }
+
+    displayEmeraldCount(player) {
+        this.emeraldCountUI = add([
+            text(`${player.emeralds} / ${this.fullEmeraldCount}`, {
+                font: "Roboto-Black",
+                size: 50,
+            }),
+            {
+                fullEmeraldCount: get("emerald", { recursive: true }).length,
+            },
+            fixed(),
+            pos(90, 170)
+        ])
+    
+        this.emeraldCountUI.add([sprite("superEmerald", {anim: "shiny"}), pos(-80, -5), scale(2), fixed()])
     }
 }
 

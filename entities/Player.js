@@ -11,6 +11,8 @@ export class Player {
 
     coyoteLapse = 0.1
 
+    emeralds = 0
+
     constructor(
         posX,
         posY,
@@ -146,6 +148,15 @@ export class Player {
         this.gameObj.onCollide("demons", () => hitAndRespawn(this))
     }
 
+    //pegar e destruir esmeralda
+    enableEmeraldPickUp() {
+        this.gameObj.onCollide("emerald", (emerald) => {
+          this.emeralds++
+          destroy(emerald)
+          play("emerald")
+        })
+    }
+
     update() {
         camScale(1.5)
         onUpdate(() => {
@@ -195,9 +206,12 @@ export class Player {
         })
     }
 
-    updateCount() {
+    updateCount(emeraldCountUI) {
         onUpdate(() => {
+          emeraldCountUI.text = `${this.emeralds} / ${emeraldCountUI.fullEmeraldCount}`
+          if (this.emeralds === emeraldCountUI.fullEmeraldCount && this.emeralds > 1) {  
             go(this.isInTerminalScene ? "end" : this.currentLevelScene + 1)
+          }
         })
     }
 }

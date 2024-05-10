@@ -54,6 +54,7 @@ const scenes = {
         const level1 = new Level()
         
         level1.drawBackgroundBat('background')
+        level1.drawEmerald("whiteEmerald", "goldEmerald", "marineEmerald", "redEmerald", "greenEmerald", "blueEmerald", "purpleEmerald")
         level1.drawMapLayout(level1Layout, level1Mappings)
         
         const player = new Player(
@@ -70,6 +71,7 @@ const scenes = {
 
         player.enablePassthrough()
         player.enableMobVunerability()
+        player.enableEmeraldPickUp()
 
         player.update()
 
@@ -97,6 +99,9 @@ const scenes = {
       
         demons.setMovementPattern()
 
+        uiManager.displayEmeraldCount(player)
+        player.updateCount(uiManager.emeraldCountUI)
+
         level1.drawWaves("water_night", "wave")
     },
 
@@ -118,4 +123,4 @@ for (const key in scenes) {
     scene(key, scenes[key])
 }
 
-go(1)
+go("menu")
