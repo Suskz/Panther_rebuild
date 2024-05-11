@@ -14,7 +14,7 @@ export const load = {
         //background map 1
         loadSprite("background", "./assets/background.jpg")
 
-        loadSprite("water_night", "./assets/Water.png", {
+        loadSprite("water_brown", "./assets/Water.png", {
             sliceX: 8,
             sliceY: 1,
             anims: {
@@ -31,6 +31,74 @@ export const load = {
                 loop: true,
               },
             },
+        })
+
+        //background map 2
+        loadSprite("background-0_2", "./assets/background_0_2.jpg")
+        loadSprite('background-1_2', './assets/background_1_2.png')
+        loadSprite('background-2_2', './assets/background_2_2.png')
+        loadSprite('stars', './assets/stars.png')
+        loadSprite('stars1', './assets/stars1.png')
+        loadSprite('moon', './assets/moon.png')
+
+        loadSprite("water_night", "./assets/Water_1.png", {
+            sliceX: 8,
+            sliceY: 1,
+            anims: {
+              wave: {
+                from: 0,
+                to: 7,
+                speed: 14,
+                loop: true,
+              },
+              "wave-reversed": {
+                from: 7,
+                to: 0,
+                speed: 14,
+                loop: true,
+              },
+            },
+        })
+
+        loadSprite("cat-1", "./assets/Cat01.png", {
+            sliceX: 12,
+            sliceY: 8,
+            anims: {
+              walk: { from: 19, to: 23, loop: true },
+              idle: 0,
+            },
+        })
+
+        loadSprite("bird-1", "./assets/Bird_1.png", {
+            sliceX: 4,
+            sliceY: 8,
+            anims: {
+              fly: {
+                from: 4,
+                to: 7,
+                speed: 9,
+                loop: true,
+              },
+            },
+        })
+
+        //hearts effects
+        loadSprite('heart-1', 'assets/heart.png', {
+            sliceX: 7,
+            sliceY: 1,
+            anims: { 'heart-anim': {from: 0, to: 6, loop: true}}
+        })
+
+        loadSprite('rightheart-1', 'assets/heartRight.png', {
+            sliceX: 1,
+            sliceY: 7,
+            anims: { 'heartr-anim': {from: 0, to: 6, loop: true}}
+        })
+
+        loadSprite('leftheart-1', 'assets/heartLeft.png', {
+            sliceX: 1,
+            sliceY: 7,
+            anims: { 'heartl-anim': {from: 0, to: 6, loop: true}}
         })
 
         //map tileset

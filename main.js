@@ -7,8 +7,12 @@ import { Player } from "./entities/Player.js"
 import { Bats } from "./entities/Bats.js"
 import { Nightmares } from "./entities/Nightmares.js"
 import { Demons } from "./entities/Demons.js"
+import { Cats } from "./entities/Cats.js"
+import { Birds } from "./entities/Birds.js"
 import { level1Config } from "./content/level1/config.js"
 import { level1Layout, level1Mappings } from "./content/level1/level1Layout.js"
+import { level2Config } from "./content/level2/config.js"
+import { level2Layout, level2Mappings } from "./content/level2/level2Layout.js"
 
 kaboom({
     width: 1280,
@@ -105,12 +109,71 @@ const scenes = {
 
         uiManager.displayEmeraldCount(player)
         player.updateCount(uiManager.emeraldCountUI)
-
-        level1.drawWaves("water_night", "wave")
     },
 
     2: () => {
+        /*bgSoundManager.pauseAllSounds()
+        bgSoundManager.addSound("happybirthday", {
+            volume: 0.6,
+            loop: true,
+        })
+        bgSoundManager.play("happybirthday")*/
 
+        const level2 = new Level()
+        level2.drawInvisibleWall()
+        level2.drawBackgroundForest("background-0_2")
+        level2.drawBackgroundForestFlipX("background-0_2")
+        level2.drawBackgroundForest("background-1_2")
+        level2.drawBackgroundForestFlipX("background-1_2")
+        level2.drawBackgroundForest("background-2_2")
+        level2.drawBackgroundForestFlipX("background-2_2")
+        level2.drawStars("stars", "stars1")
+        level2.drawMoon("moon")
+        level2.drawTree("smaller-tree")
+        level2.drawBigTree("bigger-tree")
+        //level2.drawSa()
+        level2.drawEmeraldCircle("whiteEmerald", "redEmerald", "marineEmerald", "goldEmerald", "greenEmerald", "blueEmerald", "purpleEmerald")
+        level2.drawEmeraldStars()
+
+        level2.drawInvisibleWall()
+        level2.drawMapLayout(level2Layout, level2Mappings)
+        
+        const player = new Player(
+            level2Config.playerStartPosX,
+            level2Config.playerStartPosY,
+            level2Config.playerRespawPosX,
+            level2Config.playerRespawPosY,
+            level2Config.playerSpeed,
+            level2Config.jumpForce,
+            level2Config.nbLives,
+            2,
+            false
+        )
+
+        player.enablePassthrough()
+        player.enableMobVunerability()
+        player.enableEmeraldPickUp()
+
+        player.update()
+
+        const cats = new Cats(
+            level2Config.catPositions.map((catPos) => catPos()),
+            level2Config.catAmplitudes,
+            level2Config.catSpeeds,
+            level2Config.catType
+        )
+        cats.setMovementPattern()
+        cats.enablePassthrough()
+
+        const birds = new Birds(
+            level2Config.birdPositions.map((birdPos) => birdPos()),
+            level2Config.birdRanges,
+            level2Config.birdType
+        )
+      
+        birds.setMovementPattern()
+
+        level2.drawWaves("water_night", "wave")
     },
 
     gameover: () => {
@@ -127,4 +190,4 @@ for (const key in scenes) {
     scene(key, scenes[key])
 }
 
-go(1)
+go(2)
