@@ -2,50 +2,88 @@ export const level2Config = {
     playerSpeed: 500,
     jumpForce: 650,
     nbLives: 3,
-    playerStartPosX: 900,
-    playerStartPosY: 10,
+    playerStartPosX: 2999,
+    playerStartPosY: 100,
+    //playerStartPosX: 900,
+    //playerStartPosY: 10,
     
-    /*heartPositions: [
-        () => vec2(353, 160),
+    heartPositions: [
+        //beca
         () => vec2(353, -70),
-        () => vec2(673, -1),
-        () => vec2(735, 380),
-        () => vec2(1700, -80),
-        () => vec2(1440, 110),
-        () => vec2(1946, 240),
-        () => vec2(2400, 53),
-        () => vec2(2847, 240),
-        () => vec2(3040, -43)
+        () => vec2(550, -70),
+        //beca1
+        () => vec2(353, 160),
+        () => vec2(550, 160),
+        //beca2
+        () => vec2(735, 350),
+        //beca3
+        () => vec2(1750, -80),
+        () => vec2(1960, -80),
+        //beca4
+        () => vec2(1568, 140),
+        //beca5
+        () => vec2(1950, 160),
+        //beca6
+        () => vec2(2400, -25),
+        () => vec2(2340, -25),
+        //beca7
+        () => vec2(2847, 160),
+        //beca8
+        () => vec2(3040, -170)
     ],
     heartType: 1,
 
     rightheartPositions: [
-        () => vec2(440, 230),
-        () => vec2(440, -1),
-        () => vec2(741, 80),
-        () => vec2(803, 445),
-        () => vec2(1786, -10),
-        () => vec2(1525, 195),
-        () => vec2(2025, 315),
-        () => vec2(2483, 115),
-        () => vec2(2920, 315),
-        () => vec2(3120, 20)
+        //beca
+        () => vec2(630, -1),
+        //beca1
+        () => vec2(630, 230),
+        //beca2
+        () => vec2(815, 445),
+        //beca3
+        () => vec2(2040, 0),
+        //beca4
+        () => vec2(1660, 220),
+        //beca5
+        () => vec2(2040, 210),
+        () => vec2(2040, 360),
+        //beca6
+        () => vec2(2478, 50),
+        () => vec2(2478, 170),
+        //beca7
+        () => vec2(2930, 215),
+        () => vec2(2930, 360),
+        //beca8
+        () => vec2(3120, -100),
+        () => vec2(3120, 40)
     ],
     rightheartType: 1,
 
     leftheartPositions: [
-        () => vec2(270, 250),
+        //beca
         () => vec2(270, -1),
-        () => vec2(605, 80),
-        () => vec2(668, 445),
-        () => vec2(1601, -10),
-        () => vec2(1353, 195),
-        () => vec2(1875, 315),
-        () => vec2(2320, 115),
-        () => vec2(2780, 315),
-        () => vec2(2960, 20)
+        //beca1
+        () => vec2(270, 250),
+        //beca2
+        () => vec2(650, 445),
+        //beca3
+        () => vec2(1665, 0),
+        //beca4
+        () => vec2(1480, 220),
+        //beca5
+        () => vec2(1860, 210),
+        () => vec2(1860, 360),
+        //beca6
+        () => vec2(2260, 50),
+        () => vec2(2260, 170),
+        //beca7
+        () => vec2(2765, 215),
+        () => vec2(2765, 360),
+        //beca8
+        () => vec2(2950, -100),
+        () => vec2(2950, 40)
     ],
-    leftheartType: 1,*/
+    leftheartType: 1,
     
     birdPositions: [
         () => vec2(570, 50),

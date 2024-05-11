@@ -108,4 +108,17 @@ export class Level {
 
         add( [sprite("emeraldStars", {anim: "explosion"}), scale (1.7), pos(996, 220), opacity(0.3), "emeraldStars" ])
     }
+
+    //Beca's
+    drawBeca() {
+        add([ sprite("beca"), scale(0.36), pos(265, -70) ])
+        add([ sprite('beca1'), scale(0.23), pos(265, 150) ])
+        add([ sprite('beca2'), scale(0.16), pos(646, 350) ])
+        add([ sprite('beca3'), scale(0.35), pos(1667, -80) ])
+        add([ sprite('beca4'), scale(0.35), pos(1475, 140) ])
+        add([ sprite('beca5'), scale(0.18), pos(1857, 150) ])
+        add([ sprite('beca6'), scale(0.29), pos(2260, -30) ])
+        add([ sprite('beca7'), scale(0.28), pos(2763, 150) ])
+        add([ sprite('beca8'), scale(0.30), pos(2948, -180) ])
+    }
 }

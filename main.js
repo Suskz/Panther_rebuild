@@ -9,6 +9,9 @@ import { Nightmares } from "./entities/Nightmares.js"
 import { Demons } from "./entities/Demons.js"
 import { Cats } from "./entities/Cats.js"
 import { Birds } from "./entities/Birds.js"
+import { Hearts } from "./utils/Hearts.js"
+import { RightHearts } from "./utils/RightHearts.js"
+import { LeftHearts } from "./utils/LeftHearts.js"
 import { level1Config } from "./content/level1/config.js"
 import { level1Layout, level1Mappings } from "./content/level1/level1Layout.js"
 import { level2Config } from "./content/level2/config.js"
@@ -131,12 +134,27 @@ const scenes = {
         level2.drawMoon("moon")
         level2.drawTree("smaller-tree")
         level2.drawBigTree("bigger-tree")
-        //level2.drawSa()
+        level2.drawBeca()
         level2.drawEmeraldCircle("whiteEmerald", "redEmerald", "marineEmerald", "goldEmerald", "greenEmerald", "blueEmerald", "purpleEmerald")
         level2.drawEmeraldStars()
 
         level2.drawInvisibleWall()
         level2.drawMapLayout(level2Layout, level2Mappings)
+
+        const hearts = new Hearts(
+            level2Config.heartPositions.map((heartPos) => heartPos()),
+            level2Config.heartType,
+        )
+
+        const righthearts = new RightHearts(
+            level2Config.rightheartPositions.map((rightheartPos) => rightheartPos()),
+            level2Config.rightheartType,
+        )
+
+        const lefthearts = new LeftHearts(
+            level2Config.leftheartPositions.map((leftheartPos) => leftheartPos()),
+            level2Config.leftheartType,
+        )
         
         const player = new Player(
             level2Config.playerStartPosX,

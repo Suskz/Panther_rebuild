@@ -41,6 +41,25 @@ export const load = {
         loadSprite('stars1', './assets/stars1.png')
         loadSprite('moon', './assets/moon.png')
 
+        //hearts effects
+        loadSprite('heart-1', 'assets/heart.png', {
+            sliceX: 7,
+            sliceY: 1,
+            anims: { 'heart-anim': {from: 0, to: 6, loop: true}}
+        })
+
+        loadSprite('rightheart-1', 'assets/heartRight.png', {
+            sliceX: 1,
+            sliceY: 7,
+            anims: { 'heartr-anim': {from: 0, to: 6, loop: true}}
+        })
+
+        loadSprite('leftheart-1', 'assets/heartLeft.png', {
+            sliceX: 1,
+            sliceY: 7,
+            anims: { 'heartl-anim': {from: 0, to: 6, loop: true}}
+        })
+
         loadSprite("water_night", "./assets/Water_1.png", {
             sliceX: 8,
             sliceY: 1,
@@ -81,6 +100,17 @@ export const load = {
               },
             },
         })
+
+        //Beca sprite
+        loadSprite('beca', 'assets/beca.jpg')
+        loadSprite('beca1', 'assets/beca1.jpg')
+        loadSprite('beca2', 'assets/beca2.jpg')
+        loadSprite('beca3', 'assets/beca3.jpg')
+        loadSprite('beca4', 'assets/beca4.jpg')
+        loadSprite('beca5', 'assets/beca5.jpg')
+        loadSprite('beca6', 'assets/beca6.jpg')
+        loadSprite('beca7', 'assets/beca7.jpg')
+        loadSprite('beca8', 'assets/beca8.jpg')
 
         //hearts effects
         loadSprite('heart-1', 'assets/heart.png', {
