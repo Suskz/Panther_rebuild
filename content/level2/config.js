@@ -2,10 +2,8 @@ export const level2Config = {
     playerSpeed: 500,
     jumpForce: 650,
     nbLives: 3,
-    playerStartPosX: 2999,
-    playerStartPosY: 100,
-    //playerStartPosX: 900,
-    //playerStartPosY: 10,
+    playerStartPosX: 900,
+    playerStartPosY: 10,
     
     heartPositions: [
         //beca

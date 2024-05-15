@@ -14,25 +14,6 @@ export const load = {
         //background map 1
         loadSprite("background", "./assets/background.jpg")
 
-        loadSprite("water_brown", "./assets/Water.png", {
-            sliceX: 8,
-            sliceY: 1,
-            anims: {
-              wave: {
-                from: 0,
-                to: 7,
-                speed: 14,
-                loop: true,
-              },
-              "wave-reversed": {
-                from: 7,
-                to: 0,
-                speed: 14,
-                loop: true,
-              },
-            },
-        })
-
         //background map 2
         loadSprite("background-0_2", "./assets/background_0_2.jpg")
         loadSprite('background-1_2', './assets/background_1_2.png')
@@ -261,12 +242,6 @@ export const load = {
             sliceX: 4,
             sliceY: 1,
             anims: { 'explosion' : { from: 0, to: 3, loop: true, speed: 8 }}
-        })
-
-        loadSprite('bigEmerald', './assets/bigEmerald.png', {
-            sliceX: 8,
-            sliceY: 1,
-            anims: { 'shine' : { from: 0, to: 7, loop: true }}
         })
 
         //Player
