@@ -37,12 +37,6 @@ const scenes = {
     },
 
     intro: () => {
-        bgSoundManager.pauseAllSounds()
-        /*bgSoundManager.addSound("menusong", {
-            volume: 0.4,
-            loop: true,
-        })
-        bgSoundManager.play("menusong")*/
         uiManager.displayIntro()
     },
 
@@ -115,12 +109,12 @@ const scenes = {
     },
 
     2: () => {
-        /*bgSoundManager.pauseAllSounds()
+        bgSoundManager.pauseAllSounds()
         bgSoundManager.addSound("happybirthday", {
             volume: 0.6,
             loop: true,
         })
-        bgSoundManager.play("happybirthday")*/
+        bgSoundManager.play("happybirthday")
 
         const level2 = new Level()
         level2.drawInvisibleWall()
@@ -137,6 +131,7 @@ const scenes = {
         level2.drawBeca()
         level2.drawEmeraldCircle("whiteEmerald", "redEmerald", "marineEmerald", "goldEmerald", "greenEmerald", "blueEmerald", "purpleEmerald")
         level2.drawEmeraldStars()
+        level2.drawTable()
 
         level2.drawInvisibleWall()
         level2.drawMapLayout(level2Layout, level2Mappings)
@@ -200,6 +195,7 @@ const scenes = {
     },
 
     end: () => {
+        //default
 
     }
 }
@@ -208,4 +204,4 @@ for (const key in scenes) {
     scene(key, scenes[key])
 }
 
-go(2)
+go("menu")

@@ -121,4 +121,38 @@ export class Level {
         add([ sprite('beca7'), scale(0.28), pos(2763, 150) ])
         add([ sprite('beca8'), scale(0.30), pos(2948, -180) ])
     }
+
+    drawTable() {
+        add([ sprite('table'), scale(3), pos(1400, 571) ])
+        add([ sprite('cake'), scale(0.15), pos(1530, 555) ])
+        add([ sprite('baloon'), scale(0.15), pos(1430, 480) ])
+        
+        add([
+            sprite('sparkle', { anim: 'sparkle-anim' }),
+            scale(0.20),
+            area({ shape: new Rect(vec2(0, 4.5), 20, 6) }),
+            anchor('center'), pos(1550, 550) 
+        ])
+
+        add([
+            sprite('sparkle', { anim: 'sparkle-anim' }),
+            scale(0.20),
+            area({ shape: new Rect(vec2(0, 4.5), 20, 6) }),
+            anchor('center'), pos(1560, 550), rotate(180) 
+        ])
+
+        add([
+            sprite('sparkle', { anim: 'sparkle-anim' }),
+            scale(0.20),
+            area({ shape: new Rect(vec2(0, 4.5), 20, 6) }),
+            anchor('center'), pos(1568, 550)
+        ])
+
+        add([
+            sprite('sparkle', { anim: 'sparkle-anim' }),
+            scale(0.20),
+            area({ shape: new Rect(vec2(0, 4.5), 20, 6) }),
+            anchor('center'), pos(1578, 550), rotate(180)
+        ])
+    }
 }

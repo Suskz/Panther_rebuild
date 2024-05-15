@@ -21,6 +21,14 @@ export const load = {
         loadSprite('stars', './assets/stars.png')
         loadSprite('stars1', './assets/stars1.png')
         loadSprite('moon', './assets/moon.png')
+        loadSprite('table', './assets/table.png')
+        loadSprite('baloon', './assets/baloon.png')
+        loadSprite('cake', './assets/cake.png')
+        loadSprite('sparkle', 'assets/sparkle.png', {
+            sliceX: 5,
+            sliceY: 4,
+            anims: { 'sparkle-anim': {from: 5, to: 19, loop: true}}
+        })
 
         //hearts effects
         loadSprite('heart-1', 'assets/heart.png', {
@@ -41,6 +49,7 @@ export const load = {
             anims: { 'heartl-anim': {from: 0, to: 6, loop: true}}
         })
 
+        //water
         loadSprite("water_night", "./assets/Water_1.png", {
             sliceX: 8,
             sliceY: 1,
@@ -60,6 +69,7 @@ export const load = {
             },
         })
 
+        //animals
         loadSprite("cat-1", "./assets/Cat01.png", {
             sliceX: 12,
             sliceY: 8,
@@ -92,25 +102,6 @@ export const load = {
         loadSprite('beca6', 'assets/beca6.jpg')
         loadSprite('beca7', 'assets/beca7.jpg')
         loadSprite('beca8', 'assets/beca8.jpg')
-
-        //hearts effects
-        loadSprite('heart-1', 'assets/heart.png', {
-            sliceX: 7,
-            sliceY: 1,
-            anims: { 'heart-anim': {from: 0, to: 6, loop: true}}
-        })
-
-        loadSprite('rightheart-1', 'assets/heartRight.png', {
-            sliceX: 1,
-            sliceY: 7,
-            anims: { 'heartr-anim': {from: 0, to: 6, loop: true}}
-        })
-
-        loadSprite('leftheart-1', 'assets/heartLeft.png', {
-            sliceX: 1,
-            sliceY: 7,
-            anims: { 'heartl-anim': {from: 0, to: 6, loop: true}}
-        })
 
         //map tileset
         loadSpriteAtlas('./assets/tileset.png', {
@@ -276,6 +267,6 @@ export const load = {
         loadSound("jump", "./sounds/jump.mp3")
         loadSound("dive", "./sounds/dive.mp3")
         loadSound("emerald", "./sounds/emerald.mp3")
-        //loadSound("menusong", "./sounds/menusong.mp3")
+        loadSound("happybirthday", "./sounds/happybirthday.mp3")
     }
 }
